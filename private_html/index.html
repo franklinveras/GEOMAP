@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<title>GEOMAP</title>
+	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/solid.min.css">
+
+	<!-- IE support: add promises polyfill before msal.js  -->    
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/bluebird@3.7.2/js/browser/bluebird.min.js"></script>
+	<script type="text/javascript" src="https://alcdn.msftauth.net/lib/1.2.1/js/msal.js" integrity="sha384-9TV1245fz+BaI+VvCjMYL0YDMElLBwNS84v3mY57pXNOt6xcUYch2QLImaTahcOP" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<nav class="sidebar">
+			<div class="sidebar-header">
+				<img src="/img/logo_novo.jpg" alt="">
+			</div>
+			<ul class="sidebar-menu">
+				<!-- <li><i class="fas fa-tachometer-alt" ></i> DASHBOARD</li> -->
+				<li data-target="tab-mapa">GEOMAP</li>
+				<li data-target="tab-dataviz">DATAVIZ</li>
+			</ul>
+		</nav>
+		<div class="content">
+			<div class="tab" id="tab-dataviz">
+				<iframe src="https://public.flourish.studio/visualisation/1725604/embed" frameborder="0" scrolling="no" style="width:100%; height: 100%;"></iframe>
+			</div>
+			<div class="tab" id="tab-mapa">
+				<div id="mapa"></div>
+				</div>
+			</div> 
+
+		</div>
+
+	</div>
+	
+	<div class="loader"><div class="spinwrapper"><div class="spin"></div></div></div>
+	<script  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ5wJLuNpwP0ooAACYODL6Ldr752vlUsA&libraries=places"></script> 	<!-- INSIRA A CHAVE DA API DO MAPS -->
+	<script src="/js/authConfig.js"></script>
+	<script src="/js/auth.js"></script>
+	<script src="/js/graph.js"></script>
+	<script src="/js/main.js"></script>
+	<script src="/js/tabs.js"></script>
+	<script src="/js/admin.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/solid.min.js"></script>
+</body>
+</html>

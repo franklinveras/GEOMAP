@@ -1,0 +1,162 @@
+/* Made with love by Mutiullah Samim*/
+
+/*
+#000
+#FFF
+*/
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,body{
+background-color: #000;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+
+.container{
+height: 100%;
+align-content: center;
+}
+
+.card{
+border: none !important;
+height: 450px;
+margin-top: auto;
+margin-bottom: auto;
+width: 380px;
+background-color: #000 !important;
+
+}
+
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #00a591;
+}
+
+.social_icon span:hover{
+color: black;
+cursor: pointer;
+}
+.card-header{
+	background: none!important;
+	border: none;
+}
+
+.card-header h3{
+color: black;
+text-align: center;
+border: none;
+}
+
+.social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
+}
+
+.input-group-prepend span{
+width: 50px;
+background-color: #00a591;
+color: white;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+color: black;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.login_btn{
+color: white;
+background-color: #00a591;
+width: 100px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: black;
+}
+
+.links{
+color: black;
+}
+
+.links a{
+margin-left: 4px;
+}
+
+#invalidPwd{
+	color: red;
+	visibility: hidden;
+}
+
+#logo{
+	margin: 15px auto;
+	text-align: center;
+}
+
+#loginButton{
+	display: none;
+	color: white;
+	font-size: 14px;
+	background: #AAA;
+	border: 1px solid #EEE;
+	padding: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#loginButton:hover{
+	background: #FFF;
+	color: black;
+	
+}
+
+#loginButton:active{
+	background:linear-gradient(180deg,#000 0% , #FFF 100%);
+}
+
+
+#loginButton img{
+	width: 30px;
+	height: 30px;
+}
+
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Old versions of Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Opera and Firefox */
+  }
+
+  .spin{margin: auto;
+	border: 6px solid #AAA; /* Light grey */
+	border-top: 6px solid #FFF; /* Blue */
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	animation: spin 2s linear infinite;
+  }
+  @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+  }

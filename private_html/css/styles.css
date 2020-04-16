@@ -1,0 +1,206 @@
+#mapa, #mapa-adhoc {
+    height: 100%;
+}
+  html, body {
+	background: #000000;
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#wrapper{
+	height: 100%;
+    margin: 0;
+	padding: 0;
+}
+.content{
+	height: 100%;
+	margin: 0px 0px 0px 200px;
+	padding: 10px 10px 10px 0px;
+	box-sizing: border-box;
+}
+.tab{
+	display: none;
+	background-color: #FFF;
+	height: 100%;
+	padding: 0;
+	border: 1px solid black;
+	border-radius:10px;
+	overflow: hidden;
+}
+.sidebar{
+	color: #fff;
+	position: fixed;
+	overflow: auto;
+	width: 200px;
+	height: auto;
+}
+.sidebar-header{
+	margin-top: 10px;
+	text-align: center;
+	padding-bottom: 15px;
+	border-bottom: 1px dotted #FFF;
+}
+.sidebar-header img{
+	width: 170px;
+}
+
+.sidebar-menu{
+	font-size: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	padding: 0;
+	margin:0;
+	list-style-type: none;
+}
+.sidebar-menu li{
+	font-size: 9pt;
+	padding: 10px;
+	border-bottom: 1px dotted #FFF;
+	cursor: pointer;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+								supported by Chrome, Opera and Firefox */
+}
+
+.sidebar-menu :hover{
+	background-color: #FFF;
+}
+.sidebar-menu > .active{
+	background-color: #FFF;
+	cursor: default;
+}
+
+.sidebar-menu > .active::after{
+	content:"▶";
+	height:30px;
+	right: -15px;
+	float: right;
+	z-index: 1000;
+}
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+td, th{
+	margin: 0px; padding: 3px;
+	border: 1px solid #ccc;
+}
+
+th{
+	color: #FFF;
+	background: #333
+}
+
+nav{
+	width: 250px;
+	display: inline-block;
+}
+
+
+
+
+.spin{
+	
+	border: 16px solid #f3f3f3; /* Light grey */
+	border-top: 16px solid #3498db; /* Blue */
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	animation: spin 2s linear infinite;
+	
+}
+
+.spinwrapper{
+	position: absolute;
+	transform: translate(-60px,-60px);
+	width: 120px;
+	height: 120px;
+	left: 50%;
+	top: 50%;
+}
+
+.loader {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 10000;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+
+.red{
+	color:red;
+	font-weight: bold;
+}
+
+.green{
+color:limegreen;
+font-weight: bold;
+}
+
+
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+	.sidebar{
+		top: 0px;
+		position: fixed;
+		width: 100%;
+		display: block;
+		height: auto;
+	}
+	.sidebar li {
+		margin: 0px;
+		border-left: 1px dotted #FFF;
+		text-align: center;
+		width:80px;
+		display: inline-block ;
+	}
+	.sidebar:last{
+		border-right: 1px dotted #FFF;
+	}
+	.sidebar-header{
+		display: none;
+	}
+
+	.sidebar-menu{
+		text-align: center;
+	}
+	.sidebar-menu li:last-child{
+		border-right: 1px dotted #FFF;
+	}
+	.sidebar-menu > .active::after{
+		content:none
+	}
+
+	.content{
+		padding: 35px 10px 10px 10px;
+		margin: 0;
+		display: block;
+		box-sizing: border-box;
+	}
+}
+  
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+	.sidebar li {
+		text-align: center;
+		float: none;
+	}
+}

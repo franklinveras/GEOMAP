@@ -1,0 +1,98 @@
+{
+	"Hospital Universitário Clementino Fraga":{
+		"coords":{"lat": -22.842490,"lng": -43.237666}
+	},
+	"Hospital Municipal Ronaldo Gazolla":{
+		"coords":{"lat": -22.825326,"lng": -43.347595}
+	},
+	"Hospital Getúlio Vargas":{
+		"coords":{"lat": -22.838981,"lng": -43.284980}
+	},
+	"Hospital Universitário Pedro Ernesto":{
+		"coords":{"lat": -22.914680,"lng": -43.237104}
+	},
+	"Hospital Federal do Andaraí":{
+		"coords":{"lat": -22.927198,"lng": -43.252161}
+	},
+	"Hospital Municipal Salgado Filho":{
+		"coords":{"lat": -22.900590,"lng": -43.278013}
+	},
+	"Hospital Municipal Evandro Freire":{
+		"coords":{"lat": -22.804624,"lng": -43.210704}
+	},
+	"Hospital Universitário Gaffrée e Guinle":{
+		"coords":{"lat": -22.916195,"lng": -43.220828}
+	},
+	"Hospital Mário Kroeff":{
+		"coords":{"lat": -22.833813,"lng": -43.286933}
+	},
+	"UPA Tijuca":{
+		"coords":{"lat": -22.923008,"lng": -43.230640}
+	},
+	"Hospital do Câncer 3 - INCA":{
+		"coords":{"lat": -22.916241,"lng": -43.258176}
+	},
+	"Hospital da Força Aérea do Galeão":{
+		"coords":{"lat": -22.812392,"lng": -43.216922}
+	},
+	"Instituto de Puericultura e Pediatria Martagão Gesteira":{
+		"coords":{"lat": -22.841110,"lng": -43.239066}
+	},
+	"Hospital Naval Marcílio Dias":{
+		"coords":{"lat": -22.913904,"lng": -43.283374}
+	},
+	"Hospital Francisco da Silva Telles":{
+		"coords":{"lat": -22.830657,"lng": -43.328043}
+	},
+	"CMS Alice Toledo Tibiriçá":{
+		"coords":{"lat": -22.830409,"lng": -43.328790}
+	},
+	"Clínica da Família Felippe Cardoso":{
+		"coords":{"lat": -22.842833,"lng": -43.279067}
+	},
+	"Centro Municipal de Saúde Salles Netto":{
+		"coords":{"lat": -22.924924,"lng": -43.208976}
+	},
+	"Hospital Tijutrauma":{
+		"coords":{"lat": -22.928587,"lng": -43.239403}
+	},
+	"Hospital São Vicente de Paulo":{
+		"coords":{"lat": -22.915913,"lng": -43.215020}
+	},
+	"Savior Medical Service":{
+		"coords":{"lat": -22.895401,"lng": -43.229421}
+	},
+	"Hospital Ilha do Governador":{
+		"coords":{"lat": -22.797365,"lng": -43.189899}
+	},
+	"Hospital São Francisco":{
+		"coords":{"lat": -22.939986,"lng": -43.247726}
+	},
+	"Hospital Municipal Miguel Couto":{
+		"coords":{"lat": -22.977461,"lng": -43.224031}
+	},
+	"Instituto Fernandes Figueira":{
+		"coords":{"lat": -22.942289,"lng": -43.174216}
+	},
+	"Instituto Nacional de Cardiologia":{
+		"coords":{"lat": -22.936727,"lng": -43.190473}
+	},
+	"Instituto de Neurologia Deolindo Couto":{
+		"coords":{"lat": -22.953871,"lng": -43.175264}
+	},
+	"Corpo de Bombeiros - 1º GSE":{
+		"coords":{"lat": -22.933739,"lng": -43.179832}
+	},
+	"Hospital Federal da Lagoa":{
+		"coords":{"lat": -22.963681,"lng": -43.215557}
+	},
+	"Instituto Estadual de Cardiologia Aloysio de Castro":{
+		"coords":{"lat": -22.953075,"lng": -43.199580}
+	},
+	"Hospital Federal de Ipanema":{
+		"coords":{"lat": -22.983973,"lng": -43.195826}
+	},
+	"CER Leblon":{
+		"coords":{"lat": -22.977162,"lng": -43.223597}
+	}
+}
