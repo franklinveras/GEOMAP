@@ -1,11 +1,11 @@
 # GEOMAP
 Controle logístico para distribuição de impressões 3d voluntárias para unidades de saúde
 
-Dependências:
+## Dependências:
 Node.js versão 8.0 ou superior
 git
 
-Instruções:
+## Instruções:
 * Faça o clone do projeto para a pasta desejada
 * Entre com o comando "npm install --save" para instalar os pacotes necessários
 * Insira sua chave de API no arquivo index.html
@@ -17,3 +17,20 @@ https://developers.google.com/sheets/api/quickstart/nodejs?hl=pt-br
 Login requer configuração de app do Azure para login por meio de conta Microsoft
 
 OBS: É necessário ter autorização de acesso às planilhas que serão utilizadas como base de dados
+
+## Agradecimentos
+
+A todos os makers e voluntários que dedicaram seus recursos, equipamento, e tempo para promover a seguraça de quem cuida de nós: os profissioais d
+e saúde, e porque não, agradecer aos próprios profissionais de saúde.
+Fica um agradecimento especial ao time de logística do SOS3D Covid-19, a saber:
+* Alexander Ishikawa
+* Bárbara Castro
+* Caroline Contador
+* Daniel Wittic
+* Danielle Cohen
+* Franklin Véras
+* João Danilo
+* Jonathas Kerber
+* Lidiane Lima
+* Luiz Ludwig
+* Milena Peclat
