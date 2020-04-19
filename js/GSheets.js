@@ -77,17 +77,18 @@ rl.question('Enter the code from that page here: ', (code) => {
 
 /**
  * Retorna os dados de um intervalo especificado de uma planilha pública Google Sheets
- * @param {string} spreadsheet Planilha Google Sheets
- * @param {string} range Intervalo a ser buscado (deve mencionar a planilha)
+ * @param {string} id Id da planilha Google Sheets
+ * @param {string} sheet nome da página (aba)
+ * @param {string} range Intervalo a ser buscado
  * @returns {Promise<Array<string>>}
  */
-async function get (spreadsheet, range){
+async function get (id, sheet, range){
 	return new Promise(async(resolve, reject)=>{
 		if (!auth) auth = await getAuth()
 		const sheets = google.sheets({version: 'v4', auth});
 		sheets.spreadsheets.values.get({
-			spreadsheetId: spreadsheet,
-			range: range,
+			spreadsheetId: id,
+			range: `'${sheet}'!${range}`,
 		}, (err, res) => {
 			if (err) return response.send('A API do Google retornou um erro: ' + err);
 			const rows = res.data.values;
@@ -97,5 +98,5 @@ async function get (spreadsheet, range){
 	
 }
 module.exports={
-	get: get
+	getSheet: get
 }

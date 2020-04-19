@@ -1,79 +1,145 @@
-window.addEventListener( "pageshow", function ( event ) {
-	var historyTraversal = event.persisted || 
-						   ( typeof window.performance != "undefined" && 
-								window.performance.navigation.type === 2 );
-	if ( historyTraversal ) {
-	  // Handle page restore.
-	  window.location.reload();
+function table(arr){
+	return arr.map(function(tr){
+		return '<tr>' + tr.map(function(td){
+			return '<td>'+td+'</td>'
+		}).join('') + '</tr>'
+	}).join('')
+}
+
+function padroniza_telefone(tel){
+	var _tel = tel
+		.trim()
+		.replace(/[-)( ]/g,'')
+
+	if(!(/[0-9]*/.test(_tel))) return tel
+
+	if(_tel.length > 9){
+		return _tel.replace(/([0-9]{2})([0-9]{4,5})([0-9]{4})/, function(...results){
+			return '(' + results[1] + ') '+ results[2] + '-' + results[3]
+		})
+	}else{
+		return _tel.replace(/([0-9]{4,5})([0-9]{4})/, function(...results){
+			return results[1] + '-' + results[2]
+		})
 	}
-  });
-  
-$(function () {
+}
 
-	$.ajaxSetup({ cache: false });
+	// ----------------------- Plota marcador no mapa -----------------------
+	function marcador(coords, info, icon, mapa){
 
-	function loading(show=true){
-		if(show){
-			$('.spin').css('display', 'block')
-			$('#loginButton').css('display', 'none')
+		var infowindow = new google.maps.InfoWindow({
+			content: info
+		});
+
+		var mkOptions = {
+			position: coords,
+			map: mapa,
+		}
+
+		if (icon) mkOptions.icon = icon
+
+		var mk = new google.maps.Marker(mkOptions);
+
+		//Informações do marcador serão exibidas ao passar o cursor por cima
+		mk.addListener('mouseover', function() {
+			infowindow.open(mapa, mk);
+		});
+
+		mk.addListener('mouseout', function() {
+			infowindow.close(mapa, mk);
+		});
+
+		mk.addListener('click', function() {
+			infowindow.open(mapa, mk);
+		});
+	}
+
+
+$(async function () {
+
+	// ------------------- Tela de carregamento -------------------
+	function loading(show){
+		if(show==undefined || show == true){
+			$('.loader').css('display','block')
 		}else{
-			$('.spin').css('display', 'none')
-			$('#loginButton').css('display', 'block')
+			$('.loader').css('display','none')
 		}
 	}
 
-	loading();
-/* 	// Helper function to call MS Graph API endpoint 
-	// using authorization bearer token scheme
-	function callMSGraph(endpoint, accessToken, callback) {
-		const headers = new Headers();
-		const bearer = `Bearer ${accessToken}`;
-	
-		headers.append("Authorization", bearer);
-	
-		const options = {
-			method: "GET",
-			headers: headers
-		};
-	
-		console.log('request made to Graph API at: ' + new Date().toString());
-		
-		fetch(endpoint, options)
-		.then(response => response.json())
-		.then(response => callback(response, endpoint))
-		.catch(error => console.log(error))
-	} */
-	
+	window.loading = loading
+	loading()
 
-	if (myMSALObj.getAccount()) {
-	getTokenPopup(loginRequest)
-		.then(response => {
-			if(response){
-				var d =  {'token': response.accessToken}
-				$.post("/auth",d,
-					function (data, textStatus, jqXHR) {
-						if(data.success){
-							window.location = '/?ts='+ (new Date().getTime())
-						}else{
-							alert('Sua conta Microsoft não possui permissão de acesso. Por favor, entre em contato com o administrador')
-							signOut()
-						}
-					},
-					"json"
-				);
+	// ------------------- Configurações iniciais do mapa -------------------
+
+	var center =	{lat: -22.904725947251862, lng: -43.26911120503963}	
+
+	map = new google.maps.Map(document.getElementById('mapa'), {
+		mapTypeControl:false,
+		center: center,
+		zoom:12
+		//mapTypeId: 'satellite'
+	});
+	
+	// ------------------- Plota KML das regiões no mapa --------------------
+	var kmlPath = 'https://seusiteaqui.xyz/kmz/nodedokml.kmz' + '?ts='+(new Date().getTime())
+		kmlLayer = new google.maps.KmlLayer(kmlPath, {
+		preserveViewport: true,
+		map: map
+	})
+
+
+	$.get('/hospitais').then(function(hospitais){
+		hospitais.forEach(function(hospital){
+			var [nome, tipo, masc_entregues, coordenadas] = hospital
+
+			var [lat, lng] = coordenadas.split(',').map(parseFloat)
+
+			coordenadas = {
+				lat: lat,
+				lng: lng
 			}
-		}).catch(error => {
-			loading()
-			alert('Sua conta Microsoft não possui permissão de acesso. Por favor, entre em contato com o administrador')
-			signOut();
-		});
-	}else{
-		loading(false)
+
+			marcador(coordenadas, nome, '/img/hosp-atendido.png',map)
+		})
+
+		loading(false); //remove a animação de carregamento da página
+	})
+
+	/*
+	//Georreferenciamento
+	service = new google.maps.places.PlacesService(map);
+	function getPlace(query){
+		var request = {
+			query: query,
+			fields: ['place_id','geometry']
+		}
+		return new Promise(function(resolve, reject){
+			service.textSearch(request, (results, status)=> {
+				if (status == google.maps.places.PlacesServiceStatus.OK) {
+					var coords = results[0].geometry.location.lat()+ ',' + results[0].geometry.location.lng()
+					setTimeout(resolve,500,coords);
+				}else{
+					alert(status)
+				}
+			}	);
+				
+		})
+	}
+	
+	window.getPlace = getPlace;
+
+	var atendidos = (await $.get('/hospitais'))
+
+	var len = atendidos.length
+	var tmp=[]
+
+	for (var i = 0; i<len; i++){
+		var a = await getPlace(atendidos[i][0])
+		console.log(a)
+		tmp.push(a)
 	}
 
-	$("#loginButton").click(function(){
-		loading()
-		signIn('Redirect')
-	})
+	console.log(tmp);
+	*/
 	
 });

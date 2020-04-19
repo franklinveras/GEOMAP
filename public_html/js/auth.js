@@ -19,7 +19,7 @@ myMSALObj.handleRedirectCallback(authRedirectCallBack);
 
 function authRedirectCallBack(error, response) {
 	if (error) {
-		signIn('Redirect');
+		signIn();
 	} else {
 	if (response.tokenType === "id_token" && myMSALObj.getAccount() && !myMSALObj.isCallback(window.location.hash)) {
 		console.log('id_token acquired at: ' + new Date().toString());
