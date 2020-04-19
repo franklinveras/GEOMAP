@@ -2,7 +2,7 @@
 Georreferenciamento para distribuição de impressões 3d voluntárias para unidades de saúde.
 
 ## Descrição
-O GEOMAP é uma implementação básica da API do Google Maps que permite ter uma noção espacial da distribuição dos hospitais, através de marcadores georreferenciados onde podem ser inseridas informações sobre demanda ou entregas realizadas.
+GEOMAP e [PLANLOG](https://github.com/planlog/v2) São iniciativas sem fins lucrativos para auxiliar na gestão, mapeamento e planejamento logístico da entrega de doações de equipamentos para unidades de saúde. é uma implementação básica da API do Google Maps que permite ter uma noção espacial da distribuição dos hospitais, através de marcadores georreferenciados onde podem ser inseridas informações sobre demanda ou entregas realizadas.
 
 ## Dependências:
 * Node.js versão 8.0 ou superior
@@ -41,9 +41,13 @@ Fica um agradecimento especial ao time de logística do SOS3D Covid-19, a saber:
 ![Exemplo de mapa](/readme/mapa.jpg)
 
 ## Links Úteis
+### PLANLOG
+### Google Maps
 **Como obter uma chave de API do Google Maps:** https://developers.google.com/maps/documentation/javascript/get-api-key  
 **Como inserir um marcador:** https://developers.google.com/maps/documentation/javascript/markers  
 **Como inserir um diálogo (infoWindow):** https://developers.google.com/maps/documentation/javascript/infowindows  
 **Como exibir um KML:** https://developers.google.com/maps/documentation/javascript/infowindows  
+### Google Sheets
 **Como obter as credenciais do Google Sheets:** https://developers.google.com/sheets/api/quickstart/nodejs?hl=pt-br  
 **Obtendo um intervalo de planilha** https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/get  
+### Outros links
