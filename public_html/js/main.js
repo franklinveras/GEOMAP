@@ -122,41 +122,47 @@ $(async function () {
 		loading(false); //remove a animação de carregamento da página
 	})
 
-	/*
-	//Georreferenciamento
-	service = new google.maps.places.PlacesService(map);
-	function getPlace(query){
+	
+	//Para georreferenciar uma unidade de saúde, é possível obter as coordenadas pelo nome, utilizando a biblioteca Places
+	//Script para Georreferenciamento:
+
+	var service = new google.maps.places.PlacesService(map);
+	/**
+	 * Obtém as coordenadas geográficas de um local através do nome
+	 * @param {string} nome_do_lugar 
+	 */
+	function getPlace(nome_do_lugar){
 		var request = {
-			query: query,
+			query: nome_do_lugar,
 			fields: ['place_id','geometry']
 		}
 		return new Promise(function(resolve, reject){
 			service.textSearch(request, (results, status)=> {
 				if (status == google.maps.places.PlacesServiceStatus.OK) {
-					var coords = results[0].geometry.location.lat()+ ',' + results[0].geometry.location.lng()
-					setTimeout(resolve,500,coords);
+					var result = results[0].geometry.location
+
+					var coords = {
+						lat: result.lat(),
+						lng: result.lng()
+					}
+
+					//Para retornar como string
+					//coords = coords.lat + "," + coords.lng
+
+					setTimeout(resolve,500,coords); //requisições de a cada 0,5 segundos para não superar a cota da API
 				}else{
 					alert(status)
 				}
-			}	);
-				
+			});	
 		})
 	}
 	
 	window.getPlace = getPlace;
 
-	var atendidos = (await $.get('/hospitais'))
-
-	var len = atendidos.length
-	var tmp=[]
-
-	for (var i = 0; i<len; i++){
-		var a = await getPlace(atendidos[i][0])
-		console.log(a)
-		tmp.push(a)
-	}
-
-	console.log(tmp);
-	*/
-	
+	/*
+	//Exemplo de uso:
+	getPlace('Hospital Estadual Adão Pereira Nunes').then(function(coord){
+		alert(JSON.stringify(coord, null, 2))
+	})
+	 */
 });
