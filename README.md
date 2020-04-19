@@ -32,7 +32,7 @@ Fica um agradecimento especial ao time de logística do SOS3D Covid-19, a saber:
 * Milena Peclat
 
 ## Exemplos de aplicação
-### Mapa + KML
-![Exemplo de mapa](/readme/mapa_2.JPG)
 ### Dashboard + Marcadores personalizados
+![Exemplo de mapa](/readme/mapa_2.JPG)
+### Mapa + KML
 ![Exemplo de mapa](/readme/mapa.jpg)
