@@ -2,8 +2,8 @@
 Controle logístico para distribuição de impressões 3d voluntárias para unidades de saúde
 
 Dependências:
-Node.js versão 8.0 ou superior
-git
+* Node.js versão 8.0 ou superior
+* git
 
 Instruções:
 * Faça o clone do projeto para a pasta desejada
