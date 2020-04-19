@@ -99,7 +99,18 @@ $(async function () {
 				lng: lng
 			}
 
-			marcador(coordenadas, nome, '/img/hosp-atendido.png',map)
+			var info = '<div id="content">'+
+			'<div id="siteNotice">'+
+			'</div>'+
+			'<h1 id="firstHeading" class="firstHeading">'+nome+'</h1>'+
+			'<div id="bodyContent">'+
+			'<p>Tipo de Hospital: '+tipo+'</p>'+
+			'<p>Máscaras entregues: '+masc_entregues+'</p>'+
+			'</div>'+
+			'</div>';
+	  
+
+			marcador(coordenadas, info, '/img/hosp-atendido.png',map)
 		})
 
 		loading(false); //remove a animação de carregamento da página
