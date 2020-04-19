@@ -42,6 +42,7 @@ Fica um agradecimento especial ao time de logística do SOS3D Covid-19, a saber:
 
 ## Links Úteis
 ### PLANLOG
+**PLANLOG:** https://github.com/planlog/v2  
 ### Google Maps
 **Como obter uma chave de API do Google Maps:** https://developers.google.com/maps/documentation/javascript/get-api-key  
 **Como inserir um marcador:** https://developers.google.com/maps/documentation/javascript/markers  
@@ -50,4 +51,3 @@ Fica um agradecimento especial ao time de logística do SOS3D Covid-19, a saber:
 ### Google Sheets
 **Como obter as credenciais do Google Sheets:** https://developers.google.com/sheets/api/quickstart/nodejs?hl=pt-br  
 **Obtendo um intervalo de planilha** https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/get  
-### Outros links
