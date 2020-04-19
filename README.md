@@ -1,17 +1,17 @@
 # GEOMAP
-Controle logístico para distribuição de impressões 3d voluntárias para unidades de saúde
+Georreferenciamento para distribuição de impressões 3d voluntárias para unidades de saúde.
 
 ## Dependências:
 * Node.js versão 8.0 ou superior
 * git
 
 ## Instruções:
-* Faça o clone do projeto para a pasta desejada
-* Entre com o comando "npm install" para instalar os pacotes necessários
-* Insira sua chave de API do Google Maps no arquivo index.html
-* Obtenha as credenciais da API do google sheets e coloque os arquivos **credentials.json** e **token.json** na pasta principal do projeto. Em caso de dúvidas sobre como obter as credenciais da API do sheets, acesse o link a seguir e siga rigorosamente as instruções:
+1. Faça o clone do projeto para a pasta desejada
+2. Entre com o comando "npm install" para instalar os pacotes necessários
+3. Insira sua chave de API do Google Maps no arquivo index.html
+4. Obtenha as credenciais da API do google sheets e coloque os arquivos **credentials.json** e **token.json** na pasta principal do projeto. Em caso de dúvidas sobre como obter as credenciais da API do sheets, acesse o link a seguir e siga rigorosamente as instruções:
 https://developers.google.com/sheets/api/quickstart/nodejs?hl=pt-br
-* Rode o script na pasta do projeto entrando com o comando "npm start" ou "node app"
+5. Rode o script na pasta do projeto entrando com o comando "npm start" ou "node app"
 
 OBS: É necessário ter autorização de acesso às planilhas que serão utilizadas como base de dados
 
