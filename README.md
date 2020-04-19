@@ -32,4 +32,5 @@ Fica um agradecimento especial ao time de logística do SOS3D Covid-19, a saber:
 * Luiz Ludwig
 * Milena Peclat
 
+![Exemplo de mapa](/readme/mapa_2.JPG)
 ![Exemplo de mapa](/readme/mapa.jpg)
