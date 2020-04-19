@@ -9,16 +9,15 @@ Controle logístico para distribuição de impressões 3d voluntárias para unid
 * Faça o clone do projeto para a pasta desejada
 * Entre com o comando "npm install" para instalar os pacotes necessários
 * Insira sua chave de API do Google Maps no arquivo index.html
-* Obtenha as credenciais da API do google sheets e coloque os arquivos **credentials.json** e **token.json** na pasta principal do projeto
-* Em caso de dúvidas sobre como obter as credenciais da API do sheets, acesse o link:
+* Obtenha as credenciais da API do google sheets e coloque os arquivos **credentials.json** e **token.json** na pasta principal do projeto. Em caso de dúvidas sobre como obter as credenciais da API do sheets, acesse o link:
 https://developers.google.com/sheets/api/quickstart/nodejs?hl=pt-br
+* Rode o script na pasta do projeto entrando com o comando "npm start" ou "node app"
 
 OBS: É necessário ter autorização de acesso às planilhas que serão utilizadas como base de dados
 
 ## Agradecimentos
 
-A todos os makers e voluntários que dedicaram seus recursos, equipamento, e tempo para promover a seguraça de quem cuida de nós: os profissioais d
-e saúde, e porque não, agradecer aos próprios profissionais de saúde.
+A todos os makers e voluntários que dedicaram seus recursos, equipamento, e tempo para promover a seguraça de quem cuida de nós: os profissioais de saúde, e porque não, agradecer aos próprios profissionais de saúde.
 Fica um agradecimento especial ao time de logística do SOS3D Covid-19, a saber:
 * Alexander Ishikawa
 * Bárbara Castro
@@ -32,5 +31,8 @@ Fica um agradecimento especial ao time de logística do SOS3D Covid-19, a saber:
 * Luiz Ludwig
 * Milena Peclat
 
+## Exemplos de aplicação
+### Mapa + KML
 ![Exemplo de mapa](/readme/mapa_2.JPG)
+### Dashboard + Marcadores personalizados
 ![Exemplo de mapa](/readme/mapa.jpg)
