@@ -2,7 +2,7 @@
 Georreferenciamento para distribuição de entrega de doações de equipamentos unidades de saúde.
 
 ## Descrição
-GEOMAP e [PLANLOG](https://github.com/planlog/v2) São iniciativas colaborativas e sem fins lucrativos feitas por profissionais de diferentes áreas entre 25/03 a 16/04/2020 remotamente no Rio de Janeiro e Manaus para auxiliar na gestão, mapeamento e planejamento logístico da entrega de doações de equipamentos para unidades de saúde.
+GEOMAP e [PLANLOG](https://github.com/planlog/v2) São iniciativas colaborativas e sem fins lucrativos feitas por profissionais de diferentes áreas entre 25/03 a 16/04/2020 remotamente no Rio de Janeiro e Manaus para auxiliar na gestão, mapeamento e planejamento logístico da entrega de doações de equipamentos para unidades de saúde.  
 O GEOMAP é uma Implementação básica da API do Google Maps que permite ter uma noção espacial da distribuição dos hospitais, através de marcadores georreferenciados onde podem ser inseridas informações sobre demanda ou entregas realizadas.  
   
 **OBS: A ferramenta apresentada não é uma versão final e necessita ser adaptada às necessidades locais de cada grupo de ação.**
