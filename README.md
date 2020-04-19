@@ -1,6 +1,9 @@
 # GEOMAP
 Georreferenciamento para distribuição de impressões 3d voluntárias para unidades de saúde.
 
+## Descrição
+O GEOMAP é uma implementação básica da API do Google Maps que permite a v
+
 ## Dependências:
 * Node.js versão 8.0 ou superior
 * git
