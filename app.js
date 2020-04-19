@@ -1,15 +1,18 @@
 /***************************************************
-	Main script do site
+	
+	Versão simplificada do Main script do site
 
     Criado por:  Franklin Véras Sertão
-    Em: 26 de março de 2020
+	Em: 26 de março de 2020
 
+	Para visualizar a versão completa, git checkout 
+	
 ****************************************************/
 
 //------------------- Imports -------------------
-var express = require('express');
-var app = express();
-var getSheet = require('./js/GSheets').getSheet
+var express		= require('express');
+var app			= express();
+var getSheet	= require('./js/GSheets').getSheet
 //-----------------------------------------------
 
 //----------------- Contantes -------------------
@@ -26,5 +29,7 @@ app.use('/hospitais', async (req, res) => {
 })
 
 app.use('/', express.static('public_html'))
+//-----------------------------------------------
 
+//Inicia servidor HTTP
 app.listen(80)
