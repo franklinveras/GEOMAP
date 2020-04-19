@@ -2,7 +2,7 @@
 Georreferenciamento para distribuição de impressões 3d voluntárias para unidades de saúde.
 
 ## Descrição
-O GEOMAP é uma implementação básica da API do Google Maps que permite ter uma noção espacial da distribuição dos hospitais, com marcadores onde podem ser inseridas informações sobre demanda ou entregas realizadas.
+O GEOMAP é uma implementação básica da API do Google Maps que permite ter uma noção espacial da distribuição dos hospitais, através de marcadores georreferenciados onde podem ser inseridas informações sobre demanda ou entregas realizadas.
 
 ## Dependências:
 * Node.js versão 8.0 ou superior
@@ -43,4 +43,5 @@ Fica um agradecimento especial ao time de logística do SOS3D Covid-19, a saber:
 ## Links Úteis
 **Como obter uma chave de API do Google Maps:** https://developers.google.com/maps/documentation/javascript/get-api-key  
 **Como inserir um marcador:** https://developers.google.com/maps/documentation/javascript/markers  
-**Como inserir um diálogo (infoWindow):** https://developers.google.com/maps/documentation/javascript/infowindows  
+**Como inserir um diálogo (infoWindow):** https://developers.google.com/maps/documentation/javascript/infowindows
+**Como exibir um KML:** https://developers.google.com/maps/documentation/javascript/infowindows
