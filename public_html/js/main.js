@@ -52,14 +52,20 @@ function marcador(coords, info, icon, mapa){
 	mk.addListener('click', function() {
 		infowindow.open(mapa, mk);
 	});
+
+	return mk
 }
 
 
 $(async function () {
 
 	// ------------------- Tela de carregamento -------------------
-	function loading(show){
-		if(show==undefined || show == true){
+	/**
+	 * Exibe ou oculta a tela de carregamento
+	 * @param {boolean} show visibilidade da tela de carregamento. Padrão: true
+	 */
+	function loading(show=true){
+		if(show){
 			$('.loader').css('display','block')
 		}else{
 			$('.loader').css('display','none')
@@ -104,8 +110,8 @@ $(async function () {
 			'</div>'+
 			'<h1 id="firstHeading" class="firstHeading">'+nome+'</h1>'+
 			'<div id="bodyContent">'+
-			'<p>Tipo de Hospital: '+tipo+'</p>'+
-			'<p>Máscaras entregues: '+masc_entregues+'</p>'+
+			'<p><strong>Tipo de Hospital:</strong> '+tipo+'</p>'+
+			'<p><strong>Máscaras entregues:</strong> '+masc_entregues+'</p>'+
 			'</div>'+
 			'</div>';
 	  
