@@ -1,3 +1,8 @@
+
+/**
+ * Gera tabelas a partir de um Array
+ * @param {Array<string>} arr 
+ */
 function table(arr){
 	return arr.map(function(tr){
 		return '<tr>' + tr.map(function(td){
@@ -6,53 +11,48 @@ function table(arr){
 	}).join('')
 }
 
-function padroniza_telefone(tel){
-	var _tel = tel
-		.trim()
-		.replace(/[-)( ]/g,'')
+/**
+ * Padronização Google para coordenadas geográficas
+ * @typedef {Object} latLng
+ * @property {number} lat
+ * @property {number} lng
+ */
 
-	if(!(/[0-9]*/.test(_tel))) return tel
+/**
+ * Plota marcador no mapa
+ * @param {latLng} coords coordenadas geográficas no padrão google
+ * @param {string} info informações do marcador
+ * @param {string} iconUrl URL para o ícone
+ * @param {*} mapa Mapa em que o marcador será inserido
+ */
+function marcador(coords, info, icon, mapa){
 
-	if(_tel.length > 9){
-		return _tel.replace(/([0-9]{2})([0-9]{4,5})([0-9]{4})/, function(...results){
-			return '(' + results[1] + ') '+ results[2] + '-' + results[3]
-		})
-	}else{
-		return _tel.replace(/([0-9]{4,5})([0-9]{4})/, function(...results){
-			return results[1] + '-' + results[2]
-		})
+	var infowindow = new google.maps.InfoWindow({
+		content: info
+	});
+
+	var mkOptions = {
+		position: coords,
+		map: mapa,
 	}
+
+	if (icon) mkOptions.icon = icon
+
+	var mk = new google.maps.Marker(mkOptions);
+
+	//Informações do marcador serão exibidas ao passar o cursor por cima
+	mk.addListener('mouseover', function() {
+		infowindow.open(mapa, mk);
+	});
+
+	mk.addListener('mouseout', function() {
+		infowindow.close(mapa, mk);
+	});
+
+	mk.addListener('click', function() {
+		infowindow.open(mapa, mk);
+	});
 }
-
-	// ----------------------- Plota marcador no mapa -----------------------
-	function marcador(coords, info, icon, mapa){
-
-		var infowindow = new google.maps.InfoWindow({
-			content: info
-		});
-
-		var mkOptions = {
-			position: coords,
-			map: mapa,
-		}
-
-		if (icon) mkOptions.icon = icon
-
-		var mk = new google.maps.Marker(mkOptions);
-
-		//Informações do marcador serão exibidas ao passar o cursor por cima
-		mk.addListener('mouseover', function() {
-			infowindow.open(mapa, mk);
-		});
-
-		mk.addListener('mouseout', function() {
-			infowindow.close(mapa, mk);
-		});
-
-		mk.addListener('click', function() {
-			infowindow.open(mapa, mk);
-		});
-	}
 
 
 $(async function () {
