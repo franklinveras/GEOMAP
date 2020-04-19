@@ -41,6 +41,6 @@ Fica um agradecimento especial ao time de logística do SOS3D Covid-19, a saber:
 ![Exemplo de mapa](/readme/mapa.jpg)
 
 ## Links Úteis
-Como obter uma chave de API do Google Maps: https://developers.google.com/maps/documentation/javascript/get-api-key  
-Como inserir um marcador: https://developers.google.com/maps/documentation/javascript/markers  
-Como inserir um diálogo (infoWindow): https://developers.google.com/maps/documentation/javascript/infowindows  
+**Como obter uma chave de API do Google Maps:** https://developers.google.com/maps/documentation/javascript/get-api-key  
+**Como inserir um marcador:** https://developers.google.com/maps/documentation/javascript/markers  
+**Como inserir um diálogo (infoWindow):** https://developers.google.com/maps/documentation/javascript/infowindows  
