@@ -16,7 +16,7 @@ O GEOMAP é uma implementação básica da API do Google Maps que permite ter um
 https://developers.google.com/sheets/api/quickstart/nodejs?hl=pt-br
 5. Rode o script na pasta do projeto entrando com o comando "npm start" ou "node app";
 
-OBS: É necessário ter autorização de acesso às planilhas que serão utilizadas como base de dados;
+OBS: É necessário ter autorização de acesso às planilhas que serão utilizadas como base de dados.
 
 ## Agradecimentos
 
