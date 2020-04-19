@@ -45,3 +45,5 @@ Fica um agradecimento especial ao time de logística do SOS3D Covid-19, a saber:
 **Como inserir um marcador:** https://developers.google.com/maps/documentation/javascript/markers  
 **Como inserir um diálogo (infoWindow):** https://developers.google.com/maps/documentation/javascript/infowindows
 **Como exibir um KML:** https://developers.google.com/maps/documentation/javascript/infowindows
+**Como obter as credenciais do Google Sheets:** https://developers.google.com/sheets/api/quickstart/nodejs?hl=pt-br
+**Obtendo um intervalo de planilha** https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/get
